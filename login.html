@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Animation</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <form method="POST" action="index.html" class="login-form">
+        <h1>FADC</h1>
+        <div class="text-input">
+            <input type="text" id="username">
+            <span data-placeholder="Username"></span>
+        </div>
+        <div class="text-input">
+            <input type="text" id="Password">
+            <span data-placeholder="Password"></span>
+        </div>
+        <button type="button" class="login-btn" value="login">Login</button>
+        <div class="text-bottom">
+            <p class=""> don't have account? <a href="#">Sign Up</a></p>
+        </div>
+    </form>
+
+    <script>
+        $(".text-input input").on('focus', function () {
+            $(this).addClass('focus');
+        })
+
+        $(".text-input input").on('blur', function () {
+            if ($(this).val() == '')
+                $(this).removeClass('focus');
+        })
+    </script>
+
+</body>
+
+</html>
